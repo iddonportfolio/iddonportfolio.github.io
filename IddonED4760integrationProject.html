@@ -42,14 +42,18 @@
 <p>The third part of my project was to build lessons, and learn to do the data analysis myself using freely accessible tools, rather than paid ones, so that those free tools can be the ones I teach students to use as part of their learning of the concepts of graphing and data analysis.</p>
 
 <h2>Background</h2>
-<p></p>
+<p>The cliché or stereotypical student response is that of, “But where will I actually use this in the real world?” Taking real weather data that students see, observe, and feel each and every day, data which affects them and those around them, seems like a great start to ending the question of whether you can use this weather data in the real world. Using the lessons and sensors I developed, not only will the students be using actual data (rather than canned data out of some book) that was measured live within their community, they’ll also be building real world skills in tools like spreadsheets, but not just specific skills, transferable skills in analysis that they can use in their own personal life and in many jobs.</p>
+
+<p>Another big part of this project for me was ensuring the data and tools were open and accessible. Should another teacher, a learner, or just the general public want access to the data from the sensors or the tools used to process the data, I wanted them to have no obstacle to prevent their use. This way any learner, young or old, can continue their learning at no cost, especially important for young learners who might not be able to continue their learning at home, for classwork or exploration and learning on their own, if they were required to purchase expensive spreadsheet software. By making all of my lessons and data accessible and free, I hope that it can encourage learning as much as possible.</p>
+
+<p>For this project my main aim is at the grade 10 mathematics and science classroom, though this technology application could easily be used in grades 9-12 mathematics, science, and physics, as well as in younger mathematics courses too where it also can help meet learning outcomes (for example, grade 6 statistics and probability (data analysis) outcomes). The specific curricular links/outcomes from the grade 10 mathematics, science, and ICT programs of studies are listed below in the Education Activities Using Sensor Data section.</p>
 
 <h2>The Sensors</h2>
 
 <p>Each sensor unit is run by an ESP8266 microcontroller as part of a Wemos D1 Mini board. The sensing of both temperature and humidity is taken care of by a DHT11 sensor connected to the microcontroller board. Shown below are the two modules connected together via Dupont cables, with a small piece of insulating tape in between to prevent shorting the DHT11 module against the shielding of the micro USB connector.</p>
 
 <figure>
-	<center><img src="images/ed4760/sensor2.jpg" alt="" width="60%"  class="grayscale"/></center>
+	<center><img src="images/ed4760/sensor2.jpg" alt="" width="60%" class="grayscale"/></center>
 	<figcaption>
 		Closeup of final DHT11 and ESP8266 sensor package I built.
 	</figcaption>
@@ -62,7 +66,7 @@
 <p>To protect the sensor from the elements, and to prevent both direct and reflected sunlight from shining on the sensor and producing a higher than actual temperature reading, a housing was required. A design with double louvers known as a Stevenson screen is commonly used to prevent sunlight from shining on weather sensors, enabling you to measure the actual air temperature without influence of direct and reflected solar radiation. Since I required a Stevenson screen to house my project, I designed my own 3D printable one, shown below.</p>
 
 <figure>
-	<center><img src="images/ed4760/stevScreen.PNG" alt="" width="90%" class="grayscale"/></center>
+	<center><img src="images/ed4760/stevScreen.PNG" alt="" width="95%" class="grayscale"/></center>
 	<figcaption>
 		3D rendering of the parts I designed build my Stevenson screen sensor housing.
 	</figcaption>
@@ -89,13 +93,10 @@
  <b>Want to print your own Stevenson screen using my design?</b> I’ve made all of the 3D printable STL files for the parts I designed freely <a href="https://www.thingiverse.com/thing:4803400"  target="_blank"> available via my Thingiverse account which you can find by clicking here</a> (may take a day or two for Thingiverse to allow my design to be publicly available due to review).</p>
 
 
-
-
-
-
 <h2>The Live Data</h2>
 
-<p>Below is the live data coming from the two sensors, showing plots of temperature and relative humidity, as well as the current temperature and humidity values for each sensor.</p>
+<p>Below is the live data coming from the two sensors, showing plots of temperature and relative humidity, as well as the current temperature and humidity values for each sensor. Each sensor posts new data ever five minutes. A custom Google Map I put together shows you the location of each sensor as well.</p>
+
 
 <table border="1">
 
@@ -163,10 +164,9 @@
 <p>Below you’ll find download links to download data sets containing the temperature and humidity data from either sensor 1 or sensor 2. The data is enclosed in a CSV (comma separated value) formatted file, which can easily be opened in most common spreadsheet software such as Excel, OpenOffice Calc, and Google Sheets.</p>
 
 <ul>
-		<li><a href="sensorData/2021_03_23_sensor1.csv" download>Sensor 1 (March 23, 2021)</a></li>
-		<li> <a href="sensorData/2021_03_23_sensor2.csv" download>Sensor 2 (March 23, 2021)</a></li>
+		<li><a href="/sensorData/2021_03_23_sensor1.csv" download>Sensor 1 (March 23, 2021)</a></li>
+<li> <a href="/sensorData/2021_03_23_sensor2.csv" download>Sensor 2 (March 23, 2021)</a></li>
 </ul>
-
 
 <p>Over time as the sensors gather more data, I will continue to add newer, larger data sets for download here.</p>
 
@@ -175,13 +175,36 @@
 
 <h2>Rationale and Links to Research</h2>
 
-<p>Test5.</p>
-An affordance granted by this integration is the ability to revisit these activities again with larger data set down the road to help students cement these critical skills of graphing and data analysis. Cite constructivisim here on the repetition side of things. Since we have the real world data that is evolving as the weather changes outside, it can continue to relate and be relevant to the students, and can be something we revisit when something big happens weather wise, example first snow, really hot week of weather, etc, to take advantage of that relevance and relation to the students to try to engage them with the content.
+<p>While I could have simply used random data from a book, or less detailed weather data from roughly our area from an online source, I wanted to build a system that would allow me to present students with data from their areas, recorded in places they could see and know exactly where that data was coming from in their town. By building multiple sensors too, I wanted to present students with the reality that weather varies even around their town, not just varies on the big scales we see on the weather maps of our country.</p>
 
+<p>My hope with using the real, recent/live, local data was that it would give students more motivation to learn from, and to use, the data since it’s not just some random table pulled out of a book. From my research I found papers supporting my hopes. As explained by Sugimoto, Turner, and Stoehr, the relevance and benefits of real data being used to teach mathematics, include “enhanced student motivation, engagement, and achievement… deepened understandings about the role of mathematics in family, community, and cultural practices… and increased opportunities for student collaboration” (Sugimoto et al., 2017). That article also points out though the difficulty posed to teachers to use real data in the classroom due to the “Lack of Curricular, Relational, and Personal Resources to Support Connections” (Sugimoto et al., 2017), which gave all the more reason for me to do this project. While it might initially be seen as a con for this project, with the huge time commitment required to initially create a system like this for use in teaching, by creating it prior to full time teaching I am able to have it ready for when I am needing it for teaching in the future. Not only does this benefit me, but also other teachers who may not have the same background in data and sensor development, as they can still use my local, relevant data based on the explanation in my section titled <i>How to Get and Use the Data for Your Own Class/Projects</i> above. Since my data is publicly shared it can also benefit any learner, whether school aged or within the general public, who wants to use my data to further their own learning. That has been one of my biggest goals, both in my previous sensor projects during my first degree in physics, and now as an education student as well, is making sure that the data is publicly available and shareable should someone out there want to make use of it.</p>
+
+<p>By showing the students past data while introducing the sensors, as well as the GPS location of the sensors on Google Maps and Google Streetview, hopefully the students will see that connection to their actual surroundings from the start.</p>
+
+<p>Working with real data from our direct surrounding environment seemed like a great way to link the science and math curriculum for grade 10, while also reinforcing concepts from grade 9 math and covering some of the information and computer technology outcomes at the same time.</p>
+
+<p>For someone like me, who builds these sensors for work and for fun, incorporating this into the classroom is a fantastic way to build connections with students by showing my true passions and giving them a view into my life. As per TQS 1 – Fostering Effective Relationships, I believe projects like this will help me connect with my students, but also help students connect with their community as well. Since students are working on data about their community, and producing graphs about the weather in their community, this would work great as a way for the class to reach out to the public. The class graphs could be shared with the community to show what students are learning, both for parents to see and anyone else in the community.</p>
+
+
+
+
+
+<p>An affordance granted by this integration is the ability to revisit these activities again with larger data set down the road to help students cement these critical skills of graphing and data analysis. Cite constructivisim here on the repetition side of things. Since we have the real world data that is evolving as the weather changes outside, it can continue to relate and be relevant to the students, and can be something we revisit when something big happens weather wise, example first snow, really hot week of weather, etc, to take advantage of that relevance and relation to the students to try to engage them with the content.</p>
+<p>As per constructivism from the perspective of educational psychology as well, I’ve aimed for my lesson plans in the next section to scaffold students into being able to do more and more complex tasks after each lesson. I hope this will be able to engage students, and ensure that students don’t disengage by becoming lost on complex subjects since they’ll be scaffolded into them.</p>
+
+<p>While I’ve kept this research portion of this section primarily focused on academic sources, I also researched and consulted extensive practical resources while constructing the sensors and presenting the data. These resources can be found below in the Further Information section.</p>
 
 <h2>Education Activities Using Sensor Data</h2>
 
-<p>Below I’ve constructed learning activities, including student exemplars for those activities. These activities help to address the follow curricular outcomes.</p>
+<p>Below I’ve constructed lesson plans for learning activities using the sensor data, including student exemplars for those activities. Within the lesson plans are the curricular outcomes addressed by that lesson, as well as differentiation strategies.</p>
+
+<p>This first lesson plan is a great starting activity as it can get students connected and relating to the environment by seeing the data, and also allows them to begin getting comfortable with the basic aspects of graphing in Google sheets. This lesson is also adaptable based on the class’ experience with spreadsheets such that it can either be led by the teacher demonstrating how to do each graph on screen and comparing the outcomes of each graphing method for the weather data, or can be changed to allow students to explore the graphing methods themselves if they have experience with spreadsheets.</p>
+
+
+
+
+
+<p>Other future activities could expand the data using other sensors, discussed in the section below, for example having students try to correlate weather changes with wind speed and direction, as well as having students incorporate images taken by the students or by future sensors I plan to construct.</p>
 
 <h2>What Comes Next?</h2>
 <p>There are many ways I’d like to continue and enhance this project in the future. Below I list a few of these ideas.</p>
@@ -227,39 +250,60 @@ An affordance granted by this integration is the ability to revisit these activi
 
 
 <h2>Reflection</h2>
+<p>In this project I successfully completed my goal of constructing sensors and methods of retrieving/presenting the d
+<p>This project was a fantastic learning opportunity, and an especially useful one since I completed my goal of construct a sensor system that I will be able to use in the classroom, and that is now something I can continue to make further lessons around using at various grade levels. This system, and the lessons I learned from developing this project, will be useful throughout the many different classes I will teach in the future.</p>
+<p>The project was not without its difficulties, and certainly pushed me to have to learn more throughout the entire project. From sensor and programming learning, to delving more into the curricular outcomes of high school mathematics and science courses, to learning to present data in a logical manner to students and the general public, this was a great learning experience getting to dive right into a real project.</p>
 
-<p>This project was a fantastic learning opportunity, and an especially useful one since I got to construct a sensor system that I will actually use in the classroom, and that is now something I can continue to make further lessons around using at various grade levels. The project was not without its difficulties, and certainly pushed me to have to learn more throughout the entire project. From sensor and programming learning, to delving more into the curricular outcomes of high school mathematics and science courses, to learning to present data in a logical manner to students and the general public, this was a great learning experience getting to dive right into a real project.</p>
-
-<p>In my research of the topic, I found papers with real world evidence supporting this use of relevant information to students to enhance engagement (INTEXT CITATION HERE). Now that I have this system built, something I might not have the time to do during a normal semester teaching full time, I can put it to use at a moment’s notice to engage students in great learning in fields like mathematics, science, and information technology. This system will also allow me a great way to link different classes, like mathematics and science, to collaborate on a project to help students satisfy many different curricular outcomes in an engaging, relevant, and applicable manner to those students.</p>
+<p>In my research of the topic, I found papers with real world evidence supporting this use of relevant information to students to enhance engagement (Hammett & Dorsey, 2020; Sugimoto et al., 2017). Now that I have this system built, something I might not have the time to do during a normal semester when teaching full time, I can put this sensor setup to use at a moment’s notice to engage students in great learning in subjects such as mathematics, science, and information technology. This system will also allow me a great way to link different classes, like mathematics and science, to collaborate on a project to help students satisfy many different curricular outcomes in an engaging, relevant, and applicable manner to those students.</p>
 
 
 <h2>Further Information</h2>
-	 
-<p><a href="https://thingspeak.com/channels/1319078"  target="_blank">Sensor 1 on ThingSpeak.</a></p>
-<p><a href="https://thingspeak.com/channels/1319196"  target="_blank">Sensor 2 on ThingSpeak.</a></p>
-<p><a href="https://johniddon.github.io/"  target="_blank">My personal sensors website with other kinds of live and recorded sensor data.</a></p>
+<ul>	 
+<li><a href="https://thingspeak.com/channels/1319078"  target="_blank">Sensor 1 on ThingSpeak.</a></li>
+<li><a href="https://thingspeak.com/channels/1319196"  target="_blank">Sensor 2 on ThingSpeak.</a></li>
+<li><a href="https://johniddon.github.io/"  target="_blank">My personal sensors website with other kinds of live and recorded sensor data.</a></li>
 		
 
-Sensor and Microcontroller Documentation
-DHT11
-https://www.mouser.com/datasheet/2/758/DHT11-Technical-D ata-Sheet-Translated-Version-1143054.pdf
-This document provides the relevant information about the DHT11 sensor, a sensor capable of both temperature and humidity measurements.
-This document was important to go through to know if I would need to generate calibration curves for the sensor, which it appears I should not need to do as each sensor should be calibrated from the factory. However I will let my upcoming actual measurements in lab determine whether the calibration from factory is accurate enough, or whether I’ll need to do further calibration.
-This document also provided me with some of the most important information on the sensor, which is that of the operating voltage and the data signal voltage, which both support a range from 3 volts to 5.5 volts. This is extremely important as the ESP8266 uses 3.3 volt data pins, so this sensor will be compatible with the microcontroller.
-Wemos D1 Mini - ESP8266 Based Microcontroller Documentation
-https://www.wemos.cc/en/latest/d1/d1_mini.html
-Official Wemos D1 Mini microcontroller board specifications are listed at the above link. This was useful in planning to ensure the microcontroller and sensor were compatible.
-https://escapequotes.net/wp-content/uploads/2016/02/d1-min i-esp8266-board-sh_fixled.jpg
-This pinout diagram is incredibly useful, as it provides the pinout information for the microcontroller module for various use cases. This is important, as depending on your code and what kinds of sensors you’re working with, different pin numbering schemes may be required or specific pins may need to be used for various hardware features.
-Stevenson Screens 5
-https://www.canada.ca/en/environment-climate-change/services/skywatchers/weather-instruments-tour/stevenson-screen.html
-https://www.weatheronline.co.uk/reports/wxfacts/The-Stevenson-Scre en.htm
-Stevenson screens are tried and true containment units to protect weather sensors from the elements, as well as shield them from being affected by direct sunlight. This way, temperature sensors for example are measuring the actual air temperature, and are not being influenced by incident and reflected solar radiation on the sensor’s surface.
-Google Sheets Graphing and Data Analysis
-https://support.google.com/docs/answer/190718?hl=en
-Google’s documentation on their various graphing options.
-	  
+<li>Sensor and Microcontroller Documentation
+		<ul>
+<li>DHT11
+	<ul>
+<li><a href="https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf"  target="_blank">Data sheet.</a></li>
+<li>This data sheet provides the relevant information about the DHT11 sensor, capable of both temperature and humidity measurements. It was useful in this project as it provided the information that sensors were already factor calibrated (though I confirmed this calibration in lab using a Fluke K/J thermocouple reader). It also provided the me with some of the most important information on the sensor, that the operating voltage and the data signal voltage both support a range from 3 volts to 5.5 volts, making it compatible with the ESP8266’s 3.3 volt data pins.</li>
+				</ul>
+			</li>
+<li>Wemos D1 Mini - ESP8266 Based Microcontroller Documentation
+				<ul>
+<li><a href="https://www.wemos.cc/en/latest/d1/d1_mini.html"  target="_blank">Wemos Database.</a></li>
+<li>Official Wemos D1 Mini microcontroller board specifications are listed at the above link. This was useful in planning to ensure the microcontroller and sensor were compatible.</li>
+<li><a href="https://escapequotes.net/wp-content/uploads/2016/02/d1-mini-esp8266-board-sh_fixled.jpg"  target="_blank">Pinout diagram.</a></li>
+<li>This pinout diagram, linked above, was incredibly useful, as it provided the pinout information for the microcontroller module for various use cases. This is important, as depending on your code and what kinds of sensors you’re working with, different pin numbering schemes may be required or specific pins may need to be used for various hardware features. This was an issue I encountered, and had to troubleshoot, during this project.</li>
+				</ul>
+</li>
+	</li>
+<li>Stevenson Screens 5
+<ul>
+<li><a href="https://www.canada.ca/en/environment-climate-change/services/sky-watchers/weather-instruments-tour/stevenson-screen.html"  target="_blank"> https://www.canada.ca/en/environment-climate-change/services/sky-watchers/weather-instruments-tour/stevenson-screen.html </a></li>
+<li><a href="https://www.weatheronline.co.uk/reports/wxfacts/The-Stevenson-Screen.htm"  target="_blank">https://www.weatheronline.co.uk/reports/wxfacts/The-Stevenson-Screen.htm</a></li>
+<li> The above links provided me with good introductions to Stevenson screens. They are tried and true containment units to protect weather sensors from the elements, as well as shield them from being affected by direct sunlight. This way, temperature sensors for example are measuring the actual air temperature, and are not being influenced by incident and reflected solar radiation on the sensor’s surface.</li>
+</ul>
+</li>
+
+<li>Google Sheets Graphing and Data Analysis
+<ul>
+<li><a href="https://support.google.com/docs/answer/190718?hl=en"  target="_blank">https://support.google.com/docs/answer/190718?hl=en</a></li>
+<li> This link above is to Google’s documentation on their various graphing options.</li>
+</ul>
+</li>
+</ul>	  
+
 <h2>References</h2>
+	<ul>
+	<li>Hammett, A., & Dorsey, C. (2020). Messy Data, Real Science: Exploring Harmful Algal Blooms with Real-World Data. Science Teacher, 87(8), 40–48. </li>
+	<li>Sugimoto, A. T., Turner, E. E., & Stoehr, K. J. (2017). A Case Study of Dilemmas Encountered When Connecting Middle School Mathematics Instruction to Relevant Real World Examples. Middle Grades Research Journal, 11(2), 61–82.</li>
+	</ul>
+	
+
 	
 
 
