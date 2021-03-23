@@ -30,10 +30,41 @@
   <!-- <main> -->
   <div id="onemain">
 <h1>Data Analysis and Graphing Using Real Local Data for Education</h1>
-
 <h2>Project Overview/Summary</h2>
+<p>Driving Question: <i>How can using real local data in data analysis and graphing activities motivate and enhance the learning of students?</i></p>
 
-<p>Test1.</p>
+<p>My project was to build a set of remote wireless sensors to gather real weather data from the local area, and then learn to harvest this data and present it to students using student accessible language and tools. I wanted to ensure that the data was publicly accessible for anyone to use, be that students, fellow teachers, or the general public. I will build lessons to teach students to analyze that data using spreadsheets, specifically Google sheets since it is free, accessible, and does not require software to be installed. Students will also learn to present their findings. </p>
+
+<p>The first part of my project, building the sensors, consisted of designing, building, and programming two sensor modules that gather temperature and humidity data. While the microcontroller used was familiar to me, the sensor used was not and thus was a new learning experience for me. I also needed to construct a suitable housing for the sensors so that accurate data could be gathered in the harsh outdoor environment without being affected by direct and reflected sunlight falling upon the sensors.</p>
+
+<p>The second part of the project focused on my learning to harvest the data and present it to students in an accessible format. While the data hosting platform, called ThingSpeak, used was familiar to me, I was only familiar with uploading data. Retrieving the data and harvesting large amounts of data from ThingSpeak was a new learning experience for me. I also wanted to ensure, during this step, that I made my enclosure designs and data accessible to other learners, teachers, and the general public who might also want to make use of them.</p>
+
+<p>The third part of my project was to build lessons, and learn to do the data analysis myself using freely accessible tools, rather than paid ones, so that those free tools can be the ones I teach students to use as part of their learning of the concepts of graphing and data analysis.</p>
+
+<h2>Background</h2>
+<p></p>
+
+<h2>The Sensors</h2>
+
+<p>Each sensor unit is run by an ESP8266 microcontroller as part of a Wemos D1 Mini board. The sensing of both temperature and humidity is taken care of by a DHT11 sensor connected to the microcontroller board. Shown below are the two modules connected together via Dupont cables, with a small piece of insulating tape in between to prevent shorting the DHT11 module against the shielding of the micro USB connector.</p>
+
+(picture or two)
+<p>If you’d like to learn more about these two parts used in the project, please see my Further Information section below for datasheets and helpful technical information, including pin out diagrams.</p>
+
+
+<p>To protect the sensor from the elements, and to prevent both direct and reflected sunlight from shining on the sensor and producing a higher than actual temperature reading, a housing was required. A design with double louvers known as a Stevenson screen is commonly used to prevent sunlight from shining on weather sensors, enabling you to measure the actual air temperature without influence of direct and reflected solar radiation. Since I required a Stevenson screen to house my project, I designed my own 3D printable one, shown below.</p>
+
+(stev screen parts pic.)
+
+<p>The Stevenson screen housing I designed has 7 unique parts, and can be scaled to fit as tall a sensor as needed by simply printing more of the central piece, and thus this design can be reused in the future by myself and others for various projects.
+
+(stev screen in assembly/action pics)
+
+ <b>Want to print your own Stevenson screen using my design?</b> I’ve made all of the 3D printable STL files for the parts I designed freely <a href="https://www.thingiverse.com/thing:4803400"  target="_blank"> available via my Thingiverse account which you can find by clicking here</a> (may take a day or two for Thingiverse to allow my design to be publicly available due to review).</p>
+
+
+
+
 
 <figure>
 	<center><img src="images/ComputersForKids.jpg" alt="" class="grayscale"/></center>
@@ -41,6 +72,10 @@
 		Caption1.
 	</figcaption>
 </figure>
+
+
+
+
 
 <h2>The Live Data</h2>
 
@@ -107,39 +142,113 @@
   </tbody>
 </table>
 
-<h2>How to Use the Data</h2>
+<h2>How to Get and Use the Data for Your Own Class/Projects</h2>
 
-<p>Test7.</p>
+<p>Below you’ll find download links to download data sets containing the temperature and humidity data from either sensor 1 or sensor 2. The data is enclosed in a CSV (comma separated value) formatted file, which can easily be opened in most common spreadsheet software such as Excel, OpenOffice Calc, and Google Sheets.</p>
 
-<h2>The Sensors</h2>
+<ul>
+		<li><a href="sensorData/2021_03_23_sensor1.csv" download="sensor1">Sensor 1 (March 23, 2021)</a></li>
+<li> <a href="sensorData/2021_03_23_sensor2.csv" download>Sensor 2 (March 23, 2021)</a></li>
+</ul>
 
-<p>Test6.</p>
+<p><a href="sensorData/2021_03_23_sensor1.csv" download="logo.csv">Download test</a>
+</p>
 
-<h2>Rationale</h2>
+<p>Over time as the sensors gather more data, I will continue to add newer, larger data sets for download here.</p>
+
+<p>Posted data sets not recent enough? Want data for something that happened in the last 8 hours (the most recent ~100 data points)? Click the following links to the <a href="https://thingspeak.com/channels/1319078"  target="_blank">Sensor 1</a> or <a href="https://thingspeak.com/channels/1319196"  target="_blank">Sensor 2</a> ThingSpeak pages directly and click the Export Recent Data button above the data readouts. You’ll then be able to download approximately 100 of the most recent data points, again in CSV format.</p>
+
+
+<h2>Rationale and Links to Research</h2>
 
 <p>Test5.</p>
+An affordance granted by this integration is the ability to revisit these activities again with larger data set down the road to help students cement these critical skills of graphing and data analysis. Cite constructivisim here on the repetition side of things. Since we have the real world data that is evolving as the weather changes outside, it can continue to relate and be relevant to the students, and can be something we revisit when something big happens weather wise, example first snow, really hot week of weather, etc, to take advantage of that relevance and relation to the students to try to engage them with the content.
+
 
 <h2>Education Activities Using Sensor Data</h2>
 
-<p>Test2.</p>
+<p>Below I’ve constructed learning activities, including student exemplars for those activities. These activities help to address the follow curricular outcomes.</p>
+
+<h2>What Comes Next?</h2>
+<p>There are many ways I’d like to continue and enhance this project in the future. Below I list a few of these ideas.</p>
+
+
+<ul>
+<li>Other sensors such as:
+<ul>
+		<li>wind speed</li>
+<li>wind direction</li>
+</ul>
+</li>
+	<li>MATLAB and Maple Integration
+		<ul>
+<li>Since ThingSpeak, the service used to host and receive the sensor data, is made by Mathworks, the same company that makes MATLAB, integration of ThingSpeak data with MATLAB is built in and could be great in higher level high school mathematics and science courses for data analysis. Maple, another mathematical programing language, could also be used in those higher level classes to analyze the weather data.</li>
+</ul>
+</li>
+<li>Fieldtrips to Sensor Locations or to Place New Sensors
+	<ul>
+	<li>As was recommended to me by Professor Steed, a field trip for my future class to place new sensors, and to visit previous sensor placements, could help further build that connection and relevance of the data to the students, so they see the data from the sensor they helped setup and their ability to relate to and connect with relevantly the data from the location they went to and observed.</li>
+</ul>
+</li>
+<li>Comparing Drastically Different Locations
+<ul>
+<li>By placing sensors in drastically different environments, say at the top and bottom of a valley or coulee, students could engage higher order thinking skills to understand why there might be such vast changes in climate even if the two sensors are close to each other.</li>
+</ul>
+</li>
+<li>Classroom and School Data Displays
+<ul>
+<li>I’ve already started planning and designing a small, live sensor display for my future classroom. It will have a data readout, similar to the one above, with live graphs and current sensor readings. It will be incredibly low cost, simply consisting of an old LCD monitor and a low power single board computer such as a Raspberry Pi.</li>
+</ul>
+</li>
+
+<li>ESP32CAM Based Image Capture System
+<ul>
+<li>Utilizing the ESP32 microcontroller based ESP32CAM development boards, I’d like to construct extra sensors for an image capture and storage server that students could have access to when doing their graphing. As Professor Steed suggested, this would give a way for students to connect with their environment again even further, hopefully further enhancing student engagement as well, by linking events in the data to seen weather events. Students could even embed images into their Google Sheets graphs and as part of the explanation link those images to those times on the graph when those images were taken, and apply higher order thinking skills to have to figure out why those events took place and why those changes in the data resulted in what was visually seen in the picture, or vice versa.</li>
+<li>This will provide a large learning challenge for me as well, as image processing, especially on such low powered hardware as an ESP32, is no easy task and something I find myself severely lacking experience writing code that processes images. It will also be a large learning task for me to setup a secure, reliable, and accessible network attached storage server for these pictures captured by the ESP32CAM modules. This development project will help me to be able to broaden my experience in programming and enterprise information technology to be able to teach more subjects to students, both within the normal school system, and at the college where I currently teach summer classes.</li>
+</ul>
+</li>
+
+
+</ul>
+
 
 <h2>Reflection</h2>
 
-<p>Test4.</p>
-	  
- <!-- </main> -->
-	
- <!-- <aside> -->
-	<h2>Further Information</h2>
-	  Test3.
+<p>This project was a fantastic learning opportunity, and an especially useful one since I got to construct a sensor system that I will actually use in the classroom, and that is now something I can continue to make further lessons around using at various grade levels. The project was not without its difficulties, and certainly pushed me to have to learn more throughout the entire project. From sensor and programming learning, to delving more into the curricular outcomes of high school mathematics and science courses, to learning to present data in a logical manner to students and the general public, this was a great learning experience getting to dive right into a real project.</p>
+
+<p>In my research of the topic, I found papers with real world evidence supporting this use of relevant information to students to enhance engagement (INTEXT CITATION HERE). Now that I have this system built, something I might not have the time to do during a normal semester teaching full time, I can put it to use at a moment’s notice to engage students in great learning in fields like mathematics, science, and information technology. This system will also allow me a great way to link different classes, like mathematics and science, to collaborate on a project to help students satisfy many different curricular outcomes in an engaging, relevant, and applicable manner to those students.</p>
+
+
+<h2>Further Information</h2>
 	 
-		<p><a href="https://thingspeak.com/channels/1319078"  target="_blank">Sensor 1 on ThingSpeak.</a></p>
-		<p><a href="https://thingspeak.com/channels/1319196"  target="_blank">Sensor 2 on ThingSpeak.</a></p>
-		<p><a href="https://johniddon.github.io/"  target="_blank">My personal sensors website with other kinds of live and recorded sensor data.</a>
+<p><a href="https://thingspeak.com/channels/1319078"  target="_blank">Sensor 1 on ThingSpeak.</a></p>
+<p><a href="https://thingspeak.com/channels/1319196"  target="_blank">Sensor 2 on ThingSpeak.</a></p>
+<p><a href="https://johniddon.github.io/"  target="_blank">My personal sensors website with other kinds of live and recorded sensor data.</a></p>
 		
+
+Sensor and Microcontroller Documentation
+DHT11
+https://www.mouser.com/datasheet/2/758/DHT11-Technical-D ata-Sheet-Translated-Version-1143054.pdf
+This document provides the relevant information about the DHT11 sensor, a sensor capable of both temperature and humidity measurements.
+This document was important to go through to know if I would need to generate calibration curves for the sensor, which it appears I should not need to do as each sensor should be calibrated from the factory. However I will let my upcoming actual measurements in lab determine whether the calibration from factory is accurate enough, or whether I’ll need to do further calibration.
+This document also provided me with some of the most important information on the sensor, which is that of the operating voltage and the data signal voltage, which both support a range from 3 volts to 5.5 volts. This is extremely important as the ESP8266 uses 3.3 volt data pins, so this sensor will be compatible with the microcontroller.
+Wemos D1 Mini - ESP8266 Based Microcontroller Documentation
+https://www.wemos.cc/en/latest/d1/d1_mini.html
+Official Wemos D1 Mini microcontroller board specifications are listed at the above link. This was useful in planning to ensure the microcontroller and sensor were compatible.
+https://escapequotes.net/wp-content/uploads/2016/02/d1-min i-esp8266-board-sh_fixled.jpg
+This pinout diagram is incredibly useful, as it provides the pinout information for the microcontroller module for various use cases. This is important, as depending on your code and what kinds of sensors you’re working with, different pin numbering schemes may be required or specific pins may need to be used for various hardware features.
+Stevenson Screens 5
+https://www.canada.ca/en/environment-climate-change/services/skywatchers/weather-instruments-tour/stevenson-screen.html
+https://www.weatheronline.co.uk/reports/wxfacts/The-Stevenson-Scre en.htm
+Stevenson screens are tried and true containment units to protect weather sensors from the elements, as well as shield them from being affected by direct sunlight. This way, temperature sensors for example are measuring the actual air temperature, and are not being influenced by incident and reflected solar radiation on the sensor’s surface.
+Google Sheets Graphing and Data Analysis
+https://support.google.com/docs/answer/190718?hl=en
+Google’s documentation on their various graphing options.
 	  
-	  
-	<h2>References</h2>
+<h2>References</h2>
+	
+
+
 	
 	
   <!-- </aside> -->
