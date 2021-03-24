@@ -62,6 +62,13 @@
 
 <p>If you’d like to learn more about these two parts used in the project, please see my Further Information section below for datasheets and helpful technical information, including pin out diagrams.</p>
 
+<figure>
+	<center><img src="images/ed4760/testSerialMon.PNG" alt="" width="100%" class="grayscale"/></center>
+	<figcaption>
+		Screenshot of serial monitor output during sensor development while testing the DHT11 sensor using a program I wrote.
+	</figcaption>
+</figure>
+
 
 <p>To protect the sensor from the elements, and to prevent both direct and reflected sunlight from shining on the sensor and producing a higher than actual temperature reading, a housing was required. A design with double louvers known as a Stevenson screen is commonly used to prevent sunlight from shining on weather sensors, enabling you to measure the actual air temperature without influence of direct and reflected solar radiation. Since I required a Stevenson screen to house my project, I designed my own 3D printable one, shown below.</p>
 
@@ -96,6 +103,7 @@
 <h2>The Live Data</h2>
 
 <p>Below is the live data coming from the two sensors, showing plots of temperature and relative humidity, as well as the current temperature and humidity values for each sensor. Each sensor posts new data ever five minutes. A custom Google Map I put together shows you the location of each sensor as well.</p>
+
 
 
 <table border="1">
@@ -177,22 +185,18 @@
 
 <p>While I could have simply used random data from a book, or less detailed weather data from roughly our area from an online source, I wanted to build a system that would allow me to present students with data from their areas, recorded in places they could see and know exactly where that data was coming from in their town. By building multiple sensors too, I wanted to present students with the reality that weather varies even around their town, not just varies on the big scales we see on the weather maps of our country.</p>
 
-<p>My hope with using the real, recent/live, local data was that it would give students more motivation to learn from, and to use, the data since it’s not just some random table pulled out of a book. From my research I found papers supporting my hopes. As explained by Sugimoto, Turner, and Stoehr, the relevance and benefits of real data being used to teach mathematics, include “enhanced student motivation, engagement, and achievement… deepened understandings about the role of mathematics in family, community, and cultural practices… and increased opportunities for student collaboration” (Sugimoto et al., 2017). That article also points out though the difficulty posed to teachers to use real data in the classroom due to the “Lack of Curricular, Relational, and Personal Resources to Support Connections” (Sugimoto et al., 2017), which gave all the more reason for me to do this project. While it might initially be seen as a con for this project, with the huge time commitment required to initially create a system like this for use in teaching, by creating it prior to full time teaching I am able to have it ready for when I am needing it for teaching in the future. Not only does this benefit me, but also other teachers who may not have the same background in data and sensor development, as they can still use my local, relevant data based on the explanation in my section titled <i>How to Get and Use the Data for Your Own Class/Projects</i> above. Since my data is publicly shared it can also benefit any learner, whether school aged or within the general public, who wants to use my data to further their own learning. That has been one of my biggest goals, both in my previous sensor projects during my first degree in physics, and now as an education student as well, is making sure that the data is publicly available and shareable should someone out there want to make use of it.</p>
+<p>My hope with using the real, recent/live local data was that it would give students more motivation to learn from, and to use, the data since it’s not just some random table pulled out of a book. From my research I found papers supporting my hopes. As explained by Sugimoto, Turner, and Stoehr, the relevance and benefits of real data being used to teach mathematics, include “enhanced student motivation, engagement, and achievement… deepened understandings about the role of mathematics in family, community, and cultural practices… and increased opportunities for student collaboration” (Sugimoto et al., 2017). That article also points out though the difficulty posed to teachers to use real data in the classroom due to the “Lack of Curricular, Relational, and Personal Resources to Support Connections” (Sugimoto et al., 2017), which gave all the more reason for me to do this project. While it might initially be seen as a con for this project, with the huge time commitment required to initially create a system like this for use in teaching, by creating it prior to full time teaching I am able to have it ready for when I am needing it for teaching in the future. Not only does this benefit me, but also other teachers who may not have the same background in data and sensor development, as they can still use my local, relevant data based on the explanation in my section titled <i>How to Get and Use the Data for Your Own Class/Projects</i> above. Since my data is publicly shared it can also benefit any learner, whether school aged or within the general public, who wants to use my data to further their own learning. That has been one of my biggest goals, both in my previous sensor projects during my first degree in physics, and now as an education student as well, is making sure that the data is publicly available and shareable should someone out there want to make use of it.</p>
 
-<p>By showing the students past data while introducing the sensors, as well as the GPS location of the sensors on Google Maps and Google Streetview, hopefully the students will see that connection to their actual surroundings from the start.</p>
+<p>I also found an article by Hammett and Dorsey, which presents their experience using real data in the classroom as well as some tips on a successful implementation (Hammett & Dorsey, 2020). One of the main tips provided is described as the “big data ‘Goldilocks zone’” and notes that “preparing students for a future drenched in data means dipping them into the data pool - but not drowning them” (Hammett & Dorsey, 2020). I think this is certainly an important consideration, and is something I address in my differentiation options in my lesson plans below. As per constructivism from the perspective of educational psychology as well, I’ve aimed for my lesson plans in the next section to scaffold students into being able to do more and more complex tasks after each lesson. I hope this will be able to engage students, and ensure that students don’t disengage by becoming lost on complex subjects since they’ll be scaffolded into them, especially as Hammett and Dorsey do note that students benefit from starting with smaller data sets and then building up to bigger ones such as longer time frames (Hammett & Dorsey, 2020). </p>
+ <p>Another tip in the article is about the benefits of making sure the data is relevant and personal for the students, noting how they used a project relevant to the students surrounding 4 environmental issues (Hammett, & Dorsey, 2020). By using the climate data harvested locally, in locations that students know, I hope that my project can achieve a similar kind of relevance to students like Hammett and Dorsey’s project has, and increase student interest, motivation, and drive.</p>
 
-<p>Working with real data from our direct surrounding environment seemed like a great way to link the science and math curriculum for grade 10, while also reinforcing concepts from grade 9 math and covering some of the information and computer technology outcomes at the same time.</p>
+<p>For introducing this unit to the students using the sensor data, I hope to hook them by showing the students recent noteworth data (for example a recent storm) while introducing the sensors, as well as the GPS location of the sensors on Google Maps and Google Streetview. My hope is that the students will see that connection to their actual surroundings from the start, helping students see how the information is relevant to them and their lives and thus hopefully increasing student motivation and interest as happened in Hammett and Dorsey’s article (Hammett & Dorsey, 2020). Since in my lessons students will be working with real data from our direct surrounding environment, it was a great opportunity to link the science and math curriculum for grade 10, while also reinforcing concepts from grade 9 math and covering some of the information and computer technology outcomes at the same time.</p>
 
 <p>For someone like me, who builds these sensors for work and for fun, incorporating this into the classroom is a fantastic way to build connections with students by showing my true passions and giving them a view into my life. As per TQS 1 – Fostering Effective Relationships, I believe projects like this will help me connect with my students, but also help students connect with their community as well. Since students are working on data about their community, and producing graphs about the weather in their community, this would work great as a way for the class to reach out to the public. The class graphs could be shared with the community to show what students are learning, both for parents to see and anyone else in the community.</p>
 
+<p>Lastly, an affordance granted by this integration is the ability to revisit these activities again with larger data set down the road to help students cement these critical skills of graphing and data analysis. As per constructivism, repetition is often beneficial to help in the retention of knowledge and skills. Since we have the real-world data that is evolving as the weather changes outside, it can continue to relate and be relevant to the students, and can be a project we revisit when something big happens weather wise (for example first snowfall of fall/winter, or a really hot week of weather) to take advantage of that relevance and relation to the students to try to engage them with the content.</p>
 
-
-
-
-<p>An affordance granted by this integration is the ability to revisit these activities again with larger data set down the road to help students cement these critical skills of graphing and data analysis. Cite constructivisim here on the repetition side of things. Since we have the real world data that is evolving as the weather changes outside, it can continue to relate and be relevant to the students, and can be something we revisit when something big happens weather wise, example first snow, really hot week of weather, etc, to take advantage of that relevance and relation to the students to try to engage them with the content.</p>
-<p>As per constructivism from the perspective of educational psychology as well, I’ve aimed for my lesson plans in the next section to scaffold students into being able to do more and more complex tasks after each lesson. I hope this will be able to engage students, and ensure that students don’t disengage by becoming lost on complex subjects since they’ll be scaffolded into them.</p>
-
-<p>While I’ve kept this research portion of this section primarily focused on academic sources, I also researched and consulted extensive practical resources while constructing the sensors and presenting the data. These resources can be found below in the Further Information section.</p>
+<p>While I’ve kept this research portion of this rational section primarily focused on academic sources, I also researched and consulted extensive practical resources while constructing the sensors and presenting the data. These resources can be found below in the <i>Further Information</i> section, for I wanted to keep this section focused on the education aspect of the project.</p>
 
 <h2>Education Activities Using Sensor Data</h2>
 
@@ -204,11 +208,10 @@
 
 
 
-<p>Other future activities could expand the data using other sensors, discussed in the section below, for example having students try to correlate weather changes with wind speed and direction, as well as having students incorporate images taken by the students or by future sensors I plan to construct.</p>
+<p>Other future activities could expand the data using other sensors, discussed in the section below, for example having students try to correlate weather changes with wind speed and direction, as well as having students incorporate images with their data, images which would be taken by the students or by future sensors I plan to construct.</p>
 
 <h2>What Comes Next?</h2>
 <p>There are many ways I’d like to continue and enhance this project in the future. Below I list a few of these ideas.</p>
-
 
 <ul>
 <li>Other sensors such as:
@@ -244,17 +247,16 @@
 <li>This will provide a large learning challenge for me as well, as image processing, especially on such low powered hardware as an ESP32, is no easy task and something I find myself severely lacking experience writing code that processes images. It will also be a large learning task for me to setup a secure, reliable, and accessible network attached storage server for these pictures captured by the ESP32CAM modules. This development project will help me to be able to broaden my experience in programming and enterprise information technology to be able to teach more subjects to students, both within the normal school system, and at the college where I currently teach summer classes.</li>
 </ul>
 </li>
-
-
 </ul>
 
 
 <h2>Reflection</h2>
-<p>In this project I successfully completed my goal of constructing sensors and methods of retrieving/presenting the d
-<p>This project was a fantastic learning opportunity, and an especially useful one since I completed my goal of construct a sensor system that I will be able to use in the classroom, and that is now something I can continue to make further lessons around using at various grade levels. This system, and the lessons I learned from developing this project, will be useful throughout the many different classes I will teach in the future.</p>
-<p>The project was not without its difficulties, and certainly pushed me to have to learn more throughout the entire project. From sensor and programming learning, to delving more into the curricular outcomes of high school mathematics and science courses, to learning to present data in a logical manner to students and the general public, this was a great learning experience getting to dive right into a real project.</p>
+<p>In this project I successfully completed my goal of constructing weather sensors for education and developed methods of retrieving/presenting the data for use by students, fellow teachers, and the general public. I successfully made my data, as well as 3D printed designs, available for anyone to use to further their own learning.</p>
+<p>This project was a fantastic learning opportunity, and an especially useful one since I completed my goal of construct a sensor system that I will now be able to use in my future classroom. This sensor system is now something I can continue to make further lessons around using at various grade levels too. The sensors, as well as the lessons and skills I learned from developing this project, will be useful throughout the many different classes I will teach in the future.</p>
 
-<p>In my research of the topic, I found papers with real world evidence supporting this use of relevant information to students to enhance engagement (Hammett & Dorsey, 2020; Sugimoto et al., 2017). Now that I have this system built, something I might not have the time to do during a normal semester when teaching full time, I can put this sensor setup to use at a moment’s notice to engage students in great learning in subjects such as mathematics, science, and information technology. This system will also allow me a great way to link different classes, like mathematics and science, to collaborate on a project to help students satisfy many different curricular outcomes in an engaging, relevant, and applicable manner to those students.</p>
+<p>The project was not without its difficulties, and certainly pushed me to have to learn more throughout the entire project. From sensor and programming knowledge, to delving more into the curricular outcomes of high school mathematics and science courses, to learning to present data to be accessible to students and the general public, this was a great learning experience getting to dive right into a real project.</p>
+
+<p>In my research of the topic, I found papers with real world evidence supporting this use of relevant information to students to enhance engagement (Hammett & Dorsey, 2020; Sugimoto et al., 2017). Now that I have this system built, something I might not have the time to do during a normal semester when teaching full time, I can put this sensor setup to use at a moment’s notice to engage students in great learning in subjects such as mathematics, science, and information technology. This system will also allow me a great way to link different classes, like mathematics and science, to collaborate on a project to help students satisfy many different curricular outcomes in an engaging, relevant, and applicable manner to my future students.</p>
 
 
 <h2>Further Information</h2>
@@ -263,7 +265,6 @@
 <li><a href="https://thingspeak.com/channels/1319196"  target="_blank">Sensor 2 on ThingSpeak.</a></li>
 <li><a href="https://johniddon.github.io/"  target="_blank">My personal sensors website with other kinds of live and recorded sensor data.</a></li>
 		
-
 <li>Sensor and Microcontroller Documentation
 		<ul>
 <li>DHT11
@@ -288,7 +289,6 @@
 <li> The above links provided me with good introductions to Stevenson screens. They are tried and true containment units to protect weather sensors from the elements, as well as shield them from being affected by direct sunlight. This way, temperature sensors for example are measuring the actual air temperature, and are not being influenced by incident and reflected solar radiation on the sensor’s surface.</li>
 </ul>
 </li>
-
 <li>Google Sheets Graphing and Data Analysis
 <ul>
 <li><a href="https://support.google.com/docs/answer/190718?hl=en"  target="_blank">https://support.google.com/docs/answer/190718?hl=en</a></li>
@@ -298,10 +298,13 @@
 </ul>	  
 
 <h2>References</h2>
+
 	<ul>
 	<li>Hammett, A., & Dorsey, C. (2020). Messy Data, Real Science: Exploring Harmful Algal Blooms with Real-World Data. Science Teacher, 87(8), 40–48. </li>
 	<li>Sugimoto, A. T., Turner, E. E., & Stoehr, K. J. (2017). A Case Study of Dilemmas Encountered When Connecting Middle School Mathematics Instruction to Relevant Real World Examples. Middle Grades Research Journal, 11(2), 61–82.</li>
 	</ul>
+	
+
 	
 
 	
