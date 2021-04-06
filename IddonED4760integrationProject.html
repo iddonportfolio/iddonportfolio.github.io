@@ -14,7 +14,9 @@
 <div id="wrapper">
   <header>
     <h1>ED 4760 - Final Integration Project</h1>
-    <nav>
+   
+   <hr>
+   <!-- <nav>
       <h2 id="menulink"><a href="#navlinks">Menu</a></h2>
       <ul class="displayed" id="navlinks">
         <li><a href="index.html">Home</a></li>
@@ -27,7 +29,7 @@
       </ul>
     </nav>
   </header>
-  <!-- <main> -->
+   <main> -->
   <div id="onemain">
 <h1>Data Analysis and Graphing Using Real Local Data for Education</h1>
 <h2>Project Overview</h2>
@@ -50,7 +52,7 @@
 
 <h2>The Sensors</h2>
 
-<p>Each sensor unit is run by an ESP8266 microcontroller as part of a Wemos D1 Mini board. The sensing of both temperature and humidity is taken care of by a DHT11 sensor connected to the microcontroller board. Shown below are the two modules connected together via Dupont cables, with a small piece of insulating tape in between to prevent shorting the DHT11 module against the shielding of the micro USB connector.</p>
+<p>Each sensor unit is run by an ESP8266 microcontroller as part of a Wemos D1 Mini board. The ESP8266 is the brains of the sensor, gathering the data and providing a WiFi radio to connect to a network and send the data to the ThingSpeak service online. The sensing of both temperature and humidity is taken care of by a DHT11 sensor connected to the microcontroller board. Shown below are the two modules connected together via Dupont cables, with a small piece of insulating tape in between to prevent shorting the DHT11 module against the shielding of the micro USB connector.</p>
 
 <figure>
 	<center><img src="images/ed4760/sensor2.jpg" alt="" width="60%" class="grayscale"/></center>
@@ -97,12 +99,12 @@
 	</figcaption>
 </figure>
 
- <b>Want to print your own Stevenson screen using my design?</b> I’ve made all of the 3D printable STL files for the parts I designed freely <a href="https://www.thingiverse.com/thing:4803400"  target="_blank"> available via my Thingiverse account which you can find by clicking here</a> (may take a day or two for Thingiverse to allow my design to be publicly available due to review).</p>
+ <b>Want to print your own Stevenson screen using my design?</b> I’ve made all of the 3D printable STL files for the parts I designed freely <a href="https://www.thingiverse.com/thing:4803400"  target="_blank"> available via my Thingiverse account which you can find by clicking here</a>. It is released under a Creative Commons - Attribution - Non-Commercial - Share Alike license.</p>
 
 
 <h2>The Live Data</h2>
 
-<p>Below is the live data coming from the two sensors, showing plots of temperature and relative humidity, as well as the current temperature and humidity values for each sensor. Each sensor posts new data ever five minutes. A custom Google Map I put together shows you the location of each sensor as well.</p>
+<p>Below is the live data coming from the two sensors, showing plots of temperature and relative humidity, as well as the current temperature and humidity values for each sensor. Each sensor posts new data every five minutes. A custom Google Map I put together shows you the location of each sensor as well.</p>
 
 
 
@@ -206,10 +208,24 @@
 <p>This first lesson plan is a great starting activity as it can get students connected and relating to the environment by seeing the data, and also allows them to begin getting comfortable with the basic aspects of graphing in Google sheets. This lesson is also adaptable based on the class’ experience with spreadsheets such that it can either be led by the teacher demonstrating how to do each graph on screen and comparing the outcomes of each graphing method for the weather data, or can allow students to explore the graphing methods themselves if they have enough experience with spreadsheets.</p>
 <iframe src="https://drive.google.com/file/d/1E-hri4yTdDaWB1HPSp3G5fYO12qVA9Vy/preview" width="640" height="480"></iframe>
 
-<p>Below is an example of what a student exemplar would look like from this first activity.</p>
+<p>Below is an example of what a student exemplar would look like from this first lesson.</p>
 <iframe src="https://drive.google.com/file/d/1negaM4cA9fCLnTROKtqIILhn7a3fJ51u/preview" width="640" height="480"></iframe>
 
 <p>The second lesson is shown below.</p>
+
+<iframe src="https://drive.google.com/file/d/1pdY6bxvLVu5aMuvbIL9z5vOlafszhdHh/preview" width="640" height="480"></iframe>
+
+
+<p>Below is an example of what a student exemplar would look like from the second lesson.</p>
+<iframe src="https://drive.google.com/file/d/1lTvey2ZlPgiODjAjg1-tfhMm0TAvdp26/preview" width="640" height="480"></iframe>
+
+
+<p>The third lesson is shown below.</p>
+
+<iframe src="https://drive.google.com/file/d/1YL_UBS0aY-reibc71rNAnpKX-ePahjtZ/preview" width="640" height="480"></iframe>
+
+<p>Below is an example of what a student exemplar would look like from the third lesson.</p>
+<iframe src="https://drive.google.com/file/d/1pCil6YS-ti8c3ZaItgXgUS9MWY18eDTn/preview" width="640" height="480"></iframe>
 
 
 <p>Other future activities could expand the data using other sensors, discussed in the section below, for example having students try to correlate weather changes with wind speed and direction, as well as having students incorporate images with their data, images which would be taken by the students or by future sensors I plan to construct.</p>
@@ -231,7 +247,7 @@
 </li>
 <li>Fieldtrips to Sensor Locations or to Place New Sensors
 	<ul>
-	<li>As was recommended to me by Professor Steed, a field trip for my future class to place new sensors, and to visit previous sensor placements, could help further build that connection and relevance of the data to the students, so they see the data from the sensor they helped setup and their ability to relate to and connect with relevantly the data from the location they went to and observed.</li>
+	<li>As was recommended to me by Professor Steed, a field trip for my future class to place new sensors, and to visit previous sensor placements, could help further build that connection and relevance of the data to the students, so they see the data from the sensor they helped setup and their ability to relate to, and connect with relevantly, the data from the location they went to and observed.</li>
 </ul>
 </li>
 <li>Comparing Drastically Different Locations
@@ -242,6 +258,12 @@
 <li>Classroom and School Data Displays
 <ul>
 <li>I’ve already started planning and designing a small, live sensor display for my future classroom. It will have a data readout, similar to the one above, with live graphs and current sensor readings. It will be incredibly low cost, simply consisting of an old LCD monitor and a low power single board computer such as a Raspberry Pi.</li>
+</ul>
+</li>
+
+<li>Grade 12 Sensor Programming
+<ul>
+<li>For a grade 12 programming class with very experienced students, a project around building sensors similar to the ones I've designed could be a useful and challenging task for students. I will investigate making lesson plans on this topic in the future.</li>
 </ul>
 </li>
 
